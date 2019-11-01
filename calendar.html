@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-3.0.0.js"></script>
+    <script src="./js/my_fun.js"></script>
+</head>
+<body>
+    <h2>农历</h2>
+    <script>
+    calendar.solar2lunar(year,month,date)//返回农历（1900-2100）三个参数（年，月，日）类型：number
+    calendar.lYearDays(2020)//返回当前年的阴历总天数  参数（公历年）
+    calendar.leapMonth(2020)//返回农历y年闰月是哪个月；若y年没有闰月 则返回0   参数（公历年）
+    calendar.leapDays(2020)//返回农历y年闰月的天数 若该年没有闰月则返回0  参数（公历年）
+    calendar.solarDays(2020,5)//返回公历(!)y年m月的天数  参数（公历年,月份）
+    calendar.toGanZhiYear(2012)//农历年份转换为干支纪年   参数（农历年）
+    calendar.toAstro(5,21)//公历月、日判断所属星座 //参数（农历月，农历月）
+    calendar.toChinaMonth(12)//传入农历数字月份返回汉语通俗表示法  参数（农历月）//腊月
+    calendar.toChinaDay(21)//传入农历数字月份返回汉语通俗表示法  参数（农历日）//廿一
+    calendar.getAnimal(21)//年份转生肖[!仅能大致转换] => 精确划分生肖分界线是“立春”  参数（年）//免
+    calendar.solar2lunar(1999,9,9)//传入阳历年月日获得详细的公历、农历object信息  参数（阳历年，月，日）
+    calendar.lunar2solar(1999,9,9)//传入农历年月日以及传入的月份是否闰月获得详细的公历、农历object信息   参数（农历年，月，日）
+    </script>
+</body>
+</html>

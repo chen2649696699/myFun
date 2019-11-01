@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-3.0.0.js"></script>
+    <script src="./js/my_fun.js"></script>
+</head>
+<body>
+    <h2>图片压缩</h2>
+    <img src="./images/bg_center1.png" alt="">
+    <img  class="img2" src="" alt="">
+    <script>
+    //图片压缩（本地直接打开会报错）
+var zip=new canvas_zip();//可以写参数{a:1,b:2,c:3}
+        //参数path图片路径，{}参数，function回调函数
+        zip.dealImage("./images/bg_center1.png", {
+            quality: 0.9,//压缩的质量0-1之间
+            width: 1000,//压缩后的图片宽度，不写高等比例
+        }, function (base) {//直接将获取到的base64的字符串
+              console.log(base)
+              $(".img2").attr("src",base)
+              var imgFile = zip.dataURLtoFile(base);//base64转图片对象
+              console.log(imgFile)
+        })
+    </script>
+</body>
+</html>
