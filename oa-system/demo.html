@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能OA系统 - 功能演示</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .demo-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .demo-header h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .demo-header p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .demo-section {
+            margin-bottom: 60px;
+        }
+        
+        .demo-section h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .demo-actions {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .demo-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 0 10px;
+        }
+        
+        .demo-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .demo-btn.secondary {
+            background: #f0f0f0;
+            color: #666;
+        }
+        
+        .demo-btn.secondary:hover {
+            background: #e0e0e0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .screenshot {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            margin: 30px auto;
+            display: block;
+        }
+        
+        .tech-stack {
+            background: #f8f9ff;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .tech-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .tech-item i {
+            font-size: 32px;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .tech-item h4 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .tech-item p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="demo-header">
+            <h1>智能OA系统</h1>
+            <p>一个现代化的组织机构和成员交互性强的OA系统，提供完整的组织管理、成员协作和工作流程管理功能。</p>
+        </div>
+
+        <div class="demo-section">
+            <h2>🌟 核心功能</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3>组织架构管理</h3>
+                    <p>可视化组织架构图，直观展示部门层级关系。支持部门创建、编辑、删除，灵活分配成员到不同部门。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>成员管理</h3>
+                    <p>完整的成员信息管理，包括档案管理、状态切换、工作统计和活动记录。支持批量操作和详细信息查看。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>工作台</h3>
+                    <p>实时统计展示组织关键指标，提供快捷操作和最近活动。通知中心确保重要消息及时推送。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>工作流程</h3>
+                    <p>可配置的审批流程，支持任务分配、跟踪和完成。提供完整的流程管理和状态跟踪。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>即时通讯</h3>
+                    <p>团队成员实时沟通，支持群组聊天、文件分享和消息推送。提升团队协作效率。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>数据报表</h3>
+                    <p>组织效能分析报告，提供详细的数据统计和可视化图表。帮助管理者做出数据驱动的决策。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🎨 界面设计</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>现代化UI设计</h3>
+                    <p>采用渐变色彩和卡片式设计，提供美观现代的视觉体验。丰富的动画效果和交互反馈。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>响应式布局</h3>
+                    <p>完美适配桌面端、平板端和移动端。在不同设备上都能提供优秀的用户体验。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>信息层次清晰</h3>
+                    <p>清晰的信息架构和视觉层次，让用户能够快速找到所需信息和功能。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🔧 技术架构</h2>
+            <div class="tech-stack">
+                <h3 style="text-align: center; margin-bottom: 30px; color: #333;">前端技术栈</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class="fab fa-html5"></i>
+                        <h4>HTML5</h4>
+                        <p>语义化标签和现代HTML特性</p>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <h4>CSS3</h4>
+                        <p>Flexbox、Grid、动画、渐变</p>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <i class="fab fa-js-square"></i>
+                        <h4>JavaScript ES6+</h4>
+                        <p>类、模块、异步编程</p>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <i class="fas fa-icons"></i>
+                        <h4>Font Awesome</h4>
+                        <p>丰富的图标库</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>📊 系统特性</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>模块化设计</h3>
+                    <p>按功能模块划分代码，便于维护和扩展。每个模块独立开发，降低耦合度。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>组件化架构</h3>
+                    <p>可复用的UI组件，提高开发效率。统一的组件库确保界面一致性。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>事件驱动</h3>
+                    <p>基于事件的交互处理，响应迅速。支持复杂的用户交互场景。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>数据驱动</h3>
+                    <p>数据变化驱动界面更新，保持数据一致性。支持实时数据同步。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-actions">
+            <a href="index.html" class="demo-btn">
+                <i class="fas fa-play"></i> 立即体验
+            </a>
+            <a href="README.md" class="demo-btn secondary">
+                <i class="fas fa-book"></i> 查看文档
+            </a>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; color: #666;">
+            <p>智能OA系统 - 让组织协作更高效！</p>
+            <p style="font-size: 14px; margin-top: 10px;">
+                当前运行在: <strong>http://localhost:8000</strong>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // 添加一些交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 添加滚动动画
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // 观察所有特性卡片
+            document.querySelectorAll('.feature-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            // 添加点击效果
+            document.querySelectorAll('.feature-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = 'translateY(-5px)';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
