@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能OA系统 - 组织协作平台</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 侧边栏导航 -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-building"></i>
+                    <span>智能OA</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <h3>组织管理</h3>
+                    <ul>
+                        <li class="active" data-page="dashboard">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>工作台</span>
+                        </li>
+                        <li data-page="organization">
+                            <i class="fas fa-sitemap"></i>
+                            <span>组织架构</span>
+                        </li>
+                        <li data-page="members">
+                            <i class="fas fa-users"></i>
+                            <span>成员管理</span>
+                        </li>
+                        <li data-page="roles">
+                            <i class="fas fa-user-tag"></i>
+                            <span>角色权限</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <h3>协作办公</h3>
+                    <ul>
+                        <li data-page="workflow">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>工作流程</span>
+                        </li>
+                        <li data-page="tasks">
+                            <i class="fas fa-tasks"></i>
+                            <span>任务管理</span>
+                        </li>
+                        <li data-page="chat">
+                            <i class="fas fa-comments"></i>
+                            <span>即时通讯</span>
+                        </li>
+                        <li data-page="documents">
+                            <i class="fas fa-file-alt"></i>
+                            <span>文档中心</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-section">
+                    <h3>信息管理</h3>
+                    <ul>
+                        <li data-page="announcements">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>公告通知</span>
+                        </li>
+                        <li data-page="calendar">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>日程安排</span>
+                        </li>
+                        <li data-page="reports">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>数据报表</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 主内容区域 -->
+        <main class="main-content">
+            <!-- 顶部栏 -->
+            <header class="top-bar">
+                <div class="breadcrumb">
+                    <span id="current-page">工作台</span>
+                </div>
+                <div class="user-info">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://via.placeholder.com/32x32" alt="用户头像">
+                        <span>张三</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 页面内容容器 -->
+            <div class="content-container">
+                <!-- 工作台页面 -->
+                <div id="dashboard" class="page active">
+                    <div class="dashboard-grid">
+                        <!-- 统计卡片 -->
+                        <div class="stats-cards">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>156</h3>
+                                    <p>总成员数</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>23</h3>
+                                    <p>待处理任务</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>8</h3>
+                                    <p>待审批流程</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>95%</h3>
+                                    <p>工作效率</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 快捷操作 -->
+                        <div class="quick-actions">
+                            <h2>快捷操作</h2>
+                            <div class="action-grid">
+                                <div class="action-item" data-page="workflow">
+                                    <i class="fas fa-plus"></i>
+                                    <span>发起流程</span>
+                                </div>
+                                <div class="action-item" data-page="tasks">
+                                    <i class="fas fa-plus"></i>
+                                    <span>创建任务</span>
+                                </div>
+                                <div class="action-item" data-page="announcements">
+                                    <i class="fas fa-plus"></i>
+                                    <span>发布公告</span>
+                                </div>
+                                <div class="action-item" data-page="chat">
+                                    <i class="fas fa-plus"></i>
+                                    <span>发起会议</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 最近活动 -->
+                        <div class="recent-activities">
+                            <h2>最近活动</h2>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>李四提交了请假申请</p>
+                                        <span class="time">2分钟前</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-comment"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>王五在项目讨论组发表了新消息</p>
+                                        <span class="time">5分钟前</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>财务审批流程已完成</p>
+                                        <span class="time">10分钟前</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 组织架构页面 -->
+                <div id="organization" class="page">
+                    <div class="page-header">
+                        <h1>组织架构</h1>
+                        <button class="btn btn-primary" id="add-department">
+                            <i class="fas fa-plus"></i> 添加部门
+                        </button>
+                    </div>
+                    <div class="org-chart-container">
+                        <div id="org-chart"></div>
+                    </div>
+                </div>
+
+                <!-- 成员管理页面 -->
+                <div id="members" class="page">
+                    <div class="page-header">
+                        <h1>成员管理</h1>
+                        <button class="btn btn-primary" id="add-member">
+                            <i class="fas fa-plus"></i> 添加成员
+                        </button>
+                    </div>
+                    <div class="members-grid" id="members-grid">
+                        <!-- 成员卡片将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+
+                <!-- 其他页面占位符 -->
+                <div id="roles" class="page">
+                    <h1>角色权限管理</h1>
+                    <p>角色权限管理功能开发中...</p>
+                </div>
+
+                <div id="workflow" class="page">
+                    <h1>工作流程</h1>
+                    <p>工作流程功能开发中...</p>
+                </div>
+
+                <div id="tasks" class="page">
+                    <h1>任务管理</h1>
+                    <p>任务管理功能开发中...</p>
+                </div>
+
+                <div id="chat" class="page">
+                    <h1>即时通讯</h1>
+                    <p>即时通讯功能开发中...</p>
+                </div>
+
+                <div id="documents" class="page">
+                    <h1>文档中心</h1>
+                    <p>文档中心功能开发中...</p>
+                </div>
+
+                <div id="announcements" class="page">
+                    <h1>公告通知</h1>
+                    <p>公告通知功能开发中...</p>
+                </div>
+
+                <div id="calendar" class="page">
+                    <h1>日程安排</h1>
+                    <p>日程安排功能开发中...</p>
+                </div>
+
+                <div id="reports" class="page">
+                    <h1>数据报表</h1>
+                    <p>数据报表功能开发中...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 模态框 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">标题</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- 模态框内容 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/organization.js"></script>
+    <script src="js/members.js"></script>
+</body>
+</html>
